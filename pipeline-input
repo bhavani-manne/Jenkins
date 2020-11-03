@@ -1,0 +1,24 @@
+piepline {
+
+agent any
+
+stages {
+  stage ('Build') {
+    steps {
+            echo 'Build stage'
+          }
+       }
+  stage ('Test') {
+    steps {
+            echo 'test stage'
+            input "does test stage looks ok?"
+           }
+       }
+   stage ('Deploy') {
+      steps {
+              echo 'Deploy stage'
+            }
+        }
+     }
+  }
+       
